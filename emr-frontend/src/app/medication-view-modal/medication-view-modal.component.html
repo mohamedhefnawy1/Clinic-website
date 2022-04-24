@@ -1,0 +1,21 @@
+<div>
+    <header class="modal-header">
+        <h1>{{medication.m_name}}</h1>
+    </header>
+
+    <section class="modal-body">
+        <p>Side Effects: {{medication.side_effects}}</p>
+
+        <div style='display: flex; gap: 5px'>
+            <p>Treats: </p>
+            <div *ngFor="let item of medication.treats; let isLast = last">
+                <p>{{isLast ? item.symptom: item.symptom + ", "}}</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="modal-footer">
+        <button mat-raised-button class="modal-close-button" (click)="closeModal()">Close</button>
+    </footer>
+</div>

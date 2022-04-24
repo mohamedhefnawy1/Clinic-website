@@ -1,0 +1,55 @@
+<div class="modal-content-wrapper">
+    <header class="modal-header">
+        <h1>Add patient</h1>
+    </header>
+    <section class="modal-body">
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+            <div formGroupName="name">
+                <div class="form-group input-group-lg">
+                    <input class="form-control" placeholder="First name" formControlName="f_name">
+                </div>
+    
+                <div class="form-group input-group-lg">
+                    <input class="form-control" placeholder="Last name" formControlName="l_name">
+                </div>
+            </div>
+
+            <div class="form-group input-group-lg">
+                <input class="form-control" placeholder="SSN" formControlName="SSN">
+            </div>
+
+            <div class="form-group input-group-lg">
+                <input class="form-control" placeholder="Phone number" formControlName="phone_no">
+            </div>
+
+            <div class="form-group input-group-lg">
+                <input class="form-control" placeholder="Address" formControlName="address">
+            </div>
+
+            <div class="form-group input-group-lg">
+                <input class="form-control" placeholder="Sex" formControlName="sex">
+            </div>
+
+            <div formGroupName="dob">
+                <div class="form-group input-group-lg">
+                    <input type="number" class="form-control" placeholder="Year of birth" formControlName="year">
+                </div>
+    
+                <div class="form-group input-group-lg">
+                    <input type="number" class="form-control" placeholder="Month of birth" formControlName="month">
+                </div>
+    
+                <div class="form-group input-group-lg">
+                    <input type="number" class="form-control" placeholder="Day of birth" formControlName="day">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button mat-raised-button type="submit" class="modal-action-button btn-danger btn-block btn-lg">Add</button>
+            </div>
+        </form>
+    </section>
+    <footer id="modal-footer">
+        <button mat-raised-button class="modal-cancel-button" (click)="closeModal()">Cancel</button>
+    </footer>
+</div>

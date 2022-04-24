@@ -1,0 +1,29 @@
+.top-grid {
+    display: grid;
+    grid-template-areas: "main-heading user-info";
+    grid-template-columns: 3fr 1fr;
+}
+ 
+main-heading { 
+    grid-area: heading;
+}
+app-user {
+    grid-area: user-info;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.bottom-grid {
+    display: grid;
+    grid-template-areas: "patient-info medication-info";
+    grid-template-columns: 2fr 2fr;
+}
+
+app-patients {
+    grid-area: patient-info
+}
+
+app-medications {
+    grid-area: medication-info
+}

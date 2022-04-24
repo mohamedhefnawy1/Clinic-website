@@ -1,0 +1,27 @@
+<div class="modal-content-wrapper">
+    <header class="modal-header">
+        <h1>Doctor</h1>
+    </header>
+
+    <section class="modal-body">
+        <div *ngIf="doctor.ssn != 0">
+            <h2>{{doctor.name.f_name}} {{doctor.name.l_name}}:</h2>
+            <p>SSN: {{doctor.ssn}}</p>
+            <p>Address: {{doctor.address}}</p>
+            <p>Sex: {{doctor.sex}}</p>
+            <p>Phone number: {{doctor.phone_no}}</p>
+            <p>Date of birth: {{doctor.dob.year}}-{{doctor.dob.month}}-{{doctor.dob.day}}</p>
+            <p>Field: {{doctor.field}}</p>
+            <p>Clinic: {{doctor.clinic.name}}, {{doctor.clinic.location}}</p>
+            <p>Background: Studied at {{doctor.educationalBackground.school}} for {{doctor.educationalBackground.years}} years</p>
+        </div>
+
+        <div *ngFor="let d of doctorList">
+            <button mat-raised-button class="modal-close-button" (click)="setDoctor(d)">{{d}}</button>
+        </div>
+    </section>
+
+    <footer id="modal-footer">
+        <button mat-raised-button class="modal-close-button" (click)="closeModal()">Close</button>
+    </footer>
+</div>

@@ -1,0 +1,7 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+/.vs
+emr-backend/BusinessLibrary/Properties/launchSettings.json
+emr-backend/DatabaseLibrary/Properties/launchSettings.json
+emr-backend/EMRApi/appsettings.json~
+emr-backend/EMRApi/appsettings.json

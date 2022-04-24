@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-title">
+        <h2>Patients:</h2>
+    </div>
+    <div class="card-body">
+        <div *ngFor="let item of pageOfItems">
+            <button mat-raised-button id="add-patient-button" (click)="openView(item)">{{item}}</button>
+        </div>
+    </div>
+    <div class="card-footer">
+        <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+    </div>
+</div>
+
+<button mat-raised-button id="add-patient-button" (click)="openModal()">Add patient</button>

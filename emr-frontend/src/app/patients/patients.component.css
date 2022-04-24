@@ -1,0 +1,11 @@
+.card-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
